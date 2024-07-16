@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="left">
@@ -23,27 +24,28 @@
             <h2>Let's do this!</h2>
             <form id="my-form" action="" method="post">
                 <div>
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                    <label for="first-name">*FIRST NAME</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="John" minlength="2" required>
                 </div>
                 <div>
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name" name="last-name" placeholder="Johnson" required>
+                    <label for="last-name">*LAST NAME</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Johnson" minlength="2" required>
                 </div>
                 <div>
-                    <label for="mail">EMAIL</label>
+                    <label for="mail">*EMAIL</label>
                     <input type="email" id="mail" name="user-email" placeholder="JohnnyBoy123@gmail.com" required>
                 </div>
                 <div>
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" name="phone" placeholder="1234567890" required>
+                    <input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="^\d{10}$" title="Please enter a valid phone number, example: 0123456789">
                 </div>
                 <div>
-                    <label for="pwd">PASSWORD</label>
+                    <label for="pwd">*PASSWORD</label>
                     <input type="password" id="pwd" name="pwd" required>
+                    <span></span>
                 </div>
                 <div>
-                    <label for="pwd-confirm">CONFIRM PASSWORD</label>
+                    <label for="pwd-confirm">*CONFIRM PASSWORD</label>
                     <input type="password" id="pwd-confirm" name="pwd-confirm" required>
                 </div>
             </form>
